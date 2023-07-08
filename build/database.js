@@ -1,5 +1,10 @@
-import { Client } from "pg";
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _pg = require("pg");
 /*const client = new Client({
     user: 'grupok',
     host: '143.198.53.32',
@@ -8,17 +13,14 @@ import { Client } from "pg";
     port: 6432,
   })*/
 
-  const client = new Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'Paralela',
-    password: 'supervice2',
-    port: 5432,
-  })
-
-export default client; 
-
-
+var client = new _pg.Client({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'Paralela',
+  password: 'supervice2',
+  port: 5432
+});
+var _default = client;
 /* const conexion = async () =>{
   await client.connect();
    
@@ -35,3 +37,4 @@ app.get('/database', (req, res) => {
         console.log(respuesta)})
     })
     */
+exports["default"] = _default;

@@ -1,4 +1,9 @@
-import app from "./app"
+import app from "./app";
+import db from "./database";
 
-app.listen(3000);
-console.log('Server on port', 3000)
+const main = async () => {
+  await db.connect();
+  app.listen(8890);
+  console.log("Server on port", 8890);
+};
+main();
